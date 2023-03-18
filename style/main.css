@@ -1,0 +1,293 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: Poppin, sans-serif;
+  font-weight: 500;
+  font-size: 1.5rem;
+  color: var(--color-text-first);
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+.d-flex {
+  display: flex;
+}
+.align {
+  align-items: center;
+}
+
+@font-face {
+  font-family: poppin, sans-serif;
+  src: url("../public/Poppins-Medium.ttf");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: poppin, sans-serif;
+  src: url("../public/Poppins-SemiBold.ttf");
+  font-weight: 600;
+}
+.wrapper {
+  overflow: hidden;
+}
+/* header */
+.wrapper-header {
+  position: relative;
+  background-image: url("../images/slide-home-page/petrochemical-storage-tank-with-oil-refinery-backg-2023-01-24-13-08-07-utc-1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#header-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: #000;
+  z-index: 0;
+  opacity: 0.5;
+}
+header {
+  position: relative;
+}
+
+/* header-top */
+
+header .header-top {
+  position: relative;
+  padding: 12px;
+}
+
+header .header-top::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 0.5px;
+  width: 100%;
+  background-color: var(--white);
+}
+
+header .header-top .header-top-container .socials {
+  position: relative;
+  padding-right: 3.2rem;
+  display: inline-block;
+}
+
+header .header-top .header-top-container .socials::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 0.5px;
+  height: 100%;
+  background-color: var(--white);
+}
+
+header .header-top .header-top-container .socials li {
+  display: inline-block;
+  padding-right: 10px;
+}
+
+header .header-top .header-top-container .socials li a {
+  color: var(--white);
+}
+
+header .header-top .header-top-container .header-top__contact {
+  padding-top: 10px;
+}
+
+header .header-top .header-top-container .header-top__contact span {
+  font-size: 1.3rem;
+  display: inline-flex;
+  align-items: center;
+  color: var(--color-global-accent);
+}
+
+header .header-top .header-top-container .header-top__contact span:first-child {
+  padding-right: 10px;
+}
+
+header .header-top .header-top-container .header-top__contact span a {
+  font-size: inherit;
+  color: var(--white);
+  padding-left: 6px;
+}
+
+header .header-top .header-top-container .header-top__contact span a:hover {
+  color: var(--color-global-accent);
+}
+
+header .header-top .header-top-container .header-top__contact span i {
+  font-size: inherit;
+}
+/* reponsive - header-top */
+@media only screen and (min-width: 480px) {
+  header .header-top .header-top-container {
+    display: flex;
+    align-items: center;
+  }
+
+  header .header-top .header-top-container .socials {
+    position: relative;
+    padding-right: 1rem;
+    display: inline-block;
+  }
+
+  header .header-top .header-top-container .header-top__contact {
+    padding-left: 1.6rem;
+    padding-top: 0px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  header .header-top .header-top-container {
+    justify-content: flex-end;
+  }
+}
+
+/* header-bottom */
+header .header-bottom {
+}
+
+header .header-bottom h1 {
+  width: 15rem;
+}
+
+header .header-bottom nav {
+  position: fixed;
+  padding: 2.5rem 0rem 0px 0px;
+  top: 0;
+  left: 0;
+  background-color: var(--color-global-title);
+  width: 75%;
+  height: 100%;
+  display: none;
+}
+
+#close-menu {
+  position: absolute;
+  color: var(--white);
+  right: 5%;
+  top: 1.5rem;
+}
+
+#open-menu {
+  flex: 1;
+  text-align: right;
+}
+#open-menu .fa-solid {
+  font-size: 2rem;
+  color: var(--white);
+}
+
+#open-menu .fa-solid:hover {
+  color: var(--color-global-accent);
+  cursor: pointer;
+}
+
+#sub-logo {
+  width: 20rem;
+  margin-bottom: 2.5rem;
+  padding-left: 2.5rem;
+}
+
+header .header-bottom nav ul {
+  max-height: 50rem;
+  overflow: scroll;
+}
+
+header .header-bottom nav ul > .active {
+  position: relative;
+}
+
+header .header-bottom nav ul > .active::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 0.5px;
+  background-color: var(--color-global-accent) !important ;
+}
+
+/* header .header-bottom nav ul > .active:hover::before {
+  background-color: var(--color-global-accent) !important;
+} */
+
+header .header-bottom nav ul li {
+  color: var(--white);
+  position: relative;
+  padding-left: 2.5rem;
+  padding-top: 1.5rem;
+  transition: 0.5s all;
+}
+
+header .header-bottom nav ul > .menu__item:hover::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 0.5px;
+  background-color: var(--white);
+}
+
+header .header-bottom nav ul li a {
+  display: block;
+
+  position: relative;
+
+  margin-bottom: 2.3rem;
+  margin-right: 2rem;
+
+  color: inherit;
+}
+
+header .header-bottom nav ul li a .fa-solid {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.2rem;
+}
+
+header .header-bottom nav ul li > .sub-menu {
+  padding: 0rem 1.5rem 1.5rem 1.5rem;
+}
+header .header-bottom nav ul li > .sub-menu > li > a {
+  font-size: 1.3rem;
+}
+header .header-bottom nav ul li > .sub-menu > li:hover > a {
+  color: var(--color-global-accent);
+}
+
+/* End-header */
+
+:root {
+  --white: #ffffff;
+  --color-text-first: #6a6f83;
+  --color-text-secondary: #9ca3b5;
+  --color-text-thrid: #bdbdbd;
+  --color-global-title: #202833;
+  --color-global-primary: #3b4753;
+  --color-global-accent: #c99c00;
+}

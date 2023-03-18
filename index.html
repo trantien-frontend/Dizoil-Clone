@@ -4,9 +4,146 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style/main.css" />
+    <link rel="stylesheet" href="./style/grid.css" />
+    <link rel="stylesheet" href="./style/home.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    />
     <title>Home</title>
   </head>
   <body>
-    <h2>Home</h2>
+    <div class="wrapper">
+      <section class="wrapper-header">
+        <div id="header-overlay"></div>
+        <header>
+          <!-- Header-Top -->
+          <div class="header-top">
+            <div class="container">
+              <div class="header-top-container">
+                <ul class="socials">
+                  <li>
+                    <a href="#">
+                      <i class="fa-brands fa-facebook"></i>
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="#">
+                      <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="#">
+                      <i class="fa-brands fa-skype"></i>
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="#">
+                      <i class="fa-brands fa-youtube"></i>
+                    </a>
+                  </li>
+                </ul>
+
+                <div class="header-top__contact">
+                  <span
+                    ><i class="fa-regular fa-envelope"></i>
+                    <a href="mailto: support@dizoil.com">support@dizoil.com</a>
+                  </span>
+                  <span
+                    ><i class="fa-solid fa-phone"></i>
+                    <a href="=tel: (+62) 888-800-212">(+62) 888-800-212</a>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- header-bottom -->
+          <div class="header-bottom">
+            <div class="container d-flex align">
+              <h1>
+                <a href="#">
+                  <img
+                    src="./images/logo/siteLOGO1-300x82.png"
+                    alt="logo-dizoil"
+                  />
+                </a>
+              </h1>
+
+              <nav>
+                <div id="sub-logo">
+                  <a href="#">
+                    <img src="./images/logo/siteLOGO1-300x82.png" alt="" />
+                  </a>
+                  <div id="close-menu">
+                    <i class="fa-solid fa-x"></i>
+                  </div>
+                </div>
+                <ul id="menu">
+                  <li class="menu__item active"><a href="#">Home</a></li>
+
+                  <li class="menu__item"><a href="#">About</a></li>
+
+                  <li class="menu__item">
+                    <a href="#"
+                      >Service
+                      <i class="fa-solid fa-chevron-down"></i>
+                    </a>
+
+                    <ul class="sub-menu">
+                      <li><a href="#">service</a></li>
+                      <li><a href="#">Service-details</a></li>
+                    </ul>
+                  </li>
+
+                  <li class="menu__item">
+                    <a href="#"
+                      >Pages
+                      <i class="fa-solid fa-chevron-down"></i>
+                    </a>
+
+                    <ul class="sub-menu">
+                      <li><a href="#">Team</a></li>
+                      <li><a href="#">Project</a></li>
+                      <li><a href="#">404</a></li>
+                      <li><a href="#">Career</a></li>
+                      <li><a href="#">Blog</a></li>
+                      <li><a href="#">Single Post</a></li>
+                      <li><a href="#">FAQ</a></li>
+                    </ul>
+                  </li>
+
+                  <li class="menu__item"><a href="#">Contact</a></li>
+                </ul>
+              </nav>
+
+              <div id="open-menu">
+                <i class="fa-solid fa-bars"></i>
+              </div>
+            </div>
+          </div>
+        </header>
+        <div class="banner-text">
+          <div class="container">
+            <div class="banner-text__content">
+              <h2>Energy Resource & Oil Exploration Project.</h2>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
+                tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
+              </p>
+              <div>
+                <a href="#" class="button-primary">Get A Quote</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <main></main>
+      <footer></footer>
+    </div>
   </body>
 </html>

@@ -1,0 +1,5 @@
+.button-primary {
+  background-color: var(--color-global-accent);
+  color: var(--color-global-title);
+  padding: 15px 4rem 15px 2rem;
+}
