@@ -1,0 +1,131 @@
+.button-primary {
+  position: relative;
+  background-color: var(--color-global-accent);
+
+  color: var(--color-global-title);
+  padding: 1.5rem 3rem;
+  text-transform: capitalize;
+  transition: 0.5s all;
+}
+
+.button-primary--style_first {
+  padding: 15px 5rem 15px 3rem;
+}
+
+.button-primary > .fa-solid {
+  position: absolute;
+  top: 50%;
+  right: 3rem;
+  font-size: 1rem;
+  transform: translateY(-50%);
+}
+
+.button-primary:hover {
+  background-color: var(--color-text-first);
+  color: var(--white);
+}
+
+.button-play {
+  position: relative;
+
+  background-color: var(--color-global-accent);
+  width: 6.5rem;
+  height: 6.5rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button-play--circle {
+  border-radius: 50%;
+  background-color: var(--white);
+}
+
+.button-play .button-play__border {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -3;
+
+  width: 8rem;
+  height: 8rem;
+  background-color: var(--white);
+}
+
+.button-play::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+
+  z-index: -2;
+
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-global-accent);
+
+  animation: button-play-1 2s ease-out infinite normal backwards;
+}
+
+.button-play--circle::before,
+.button-play--circle::after {
+  border-radius: inherit;
+}
+
+.button-play::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+
+  z-index: -1;
+
+  width: 7.5rem;
+  height: 7.5rem;
+  background-color: var(--color-global-accent);
+  animation: button-play-2 2s ease-out infinite normal backwards;
+}
+
+@keyframes button-play-1 {
+  0% {
+    transform: translate(-50%, -50%) scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1.6);
+    opacity: 0;
+  }
+}
+
+@keyframes button-play-2 {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1.2);
+    opacity: 0;
+  }
+}
+
+.button-play .triangle {
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  border-top: 1.2rem solid transparent;
+  border-bottom: 1.2rem solid transparent;
+  border-left: 1.8rem solid var(--white);
+}
+
+.button-play--circle .triangle {
+  border-top: 1.2rem solid transparent;
+  border-bottom: 1.2rem solid transparent;
+  border-left: 1.8rem solid var(--color-global-accent);
+  margin-left: 5px;
+}

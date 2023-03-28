@@ -1,0 +1,112 @@
+.about-us-6 {
+  position: relative;
+  padding: 5rem 0;
+}
+
+.about-us-6::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+
+  background: url("/images/about-section-6/map.png") no-repeat center center;
+  background-size: cover;
+  filter: grayscale(100%);
+
+  opacity: 0.2;
+}
+
+.about-us-6::after {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+
+  background-color: #000;
+}
+
+.about-us-6 .about-us-6__img {
+  margin-bottom: 3rem;
+}
+
+@media only screen and (min-width: 450px) {
+  .about-us-6 .about-us-6__img {
+    text-align: center;
+  }
+  .about-us-6 .about-us-6__img img {
+    display: inline-block;
+    width: 70%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .about-us-6 .about-us-6__img {
+    margin-bottom: 0px;
+  }
+  .about-us-6 .about-us-6__img img {
+    display: block;
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .about-us-6 .about-us-6__img {
+    position: relative;
+    height: 41.8rem;
+  }
+  .about-us-6 .about-us-6__img img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.about-us-6 .about-us-6__content h2 {
+  color: var(--white);
+}
+
+.about-us-6 .about-us-6__content h2 + p {
+  padding: 1.5rem 0;
+}
+
+.about-us-6 .about-us-6__content .percent {
+  margin-bottom: 4rem;
+}
+
+.about-us-6 .about-us-6__content .percent span {
+  position: relative;
+  display: block;
+  text-transform: capitalize;
+  color: var(--white);
+  margin-bottom: 10px;
+}
+
+.about-us-6 .about-us-6__content .percent span .percent__number {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  color: var(--color-global-accent);
+}
+
+.about-us-6 .about-us-6__content .percent .percent__skill {
+  position: relative;
+  height: 5px;
+  background-color: var(--white);
+  border-radius: 2px;
+  margin-bottom: 2rem;
+  overflow: hidden;
+}
+
+.about-us-6 .about-us-6__content .percent .percent__skill > div {
+  position: absolute;
+  left: 0;
+  top: 0;
+
+  width: 0%;
+  height: 100%;
+  background-color: var(--color-global-accent);
+}

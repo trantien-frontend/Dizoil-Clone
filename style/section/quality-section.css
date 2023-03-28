@@ -1,0 +1,114 @@
+.quality {
+  position: relative;
+  padding: 8rem 0;
+}
+
+.quality::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+
+  background: url("/images/quality-background.jpg") no-repeat center center;
+  background-size: cover;
+}
+@media only screen and (min-width: 1200px) {
+  .quality::before {
+    background-attachment: fixed;
+  }
+}
+.quality::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+
+  background-color: var(--color-global-title);
+  opacity: 0.5;
+}
+
+.quality .quality__text {
+  padding: 2rem 1.5rem 4rem 1.5rem;
+  text-align: center;
+}
+
+@media only screen and (min-width: 768px) {
+  .quality .quality__text {
+    width: 70%;
+    margin: 0 auto;
+  }
+}
+
+.quality .quality__text h2 {
+  color: var(--white);
+  margin-bottom: 1.5rem;
+}
+
+.quality .quality__text h2::after {
+  display: none;
+}
+
+@media only screen and (min-width: 1200px) {
+  .quality .quality__text p {
+    padding: 0 12rem;
+  }
+}
+
+.quality .quality__text + div {
+  text-align: center;
+  padding: 0 1.5rem;
+}
+
+@media only screen and (min-width: 550px) {
+  .quality .quality__text + div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .quality .quality__text + div .quality-button {
+    padding: 0 1.5rem;
+    flex: 1 1 50%;
+    margin-bottom: 0px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .quality .quality__text + div {
+    width: 70%;
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .quality .quality__text + div {
+    width: 50%;
+    margin: 0 auto;
+  }
+}
+
+.quality .quality__text + div .quality-button {
+  margin-bottom: 2.3rem;
+}
+
+.quality .quality__text + div .quality-button a {
+  display: block;
+  padding: 2rem 0;
+
+  font-weight: 600;
+  text-transform: capitalize;
+
+  color: var(--white);
+  background-color: var(--color-global-accent);
+
+  transition: 0.5s all;
+}
+
+.quality .quality__text + div .quality-button--style-1 a {
+  background-color: var(--color-text-first);
+  margin-bottom: 0px;
+}
+
+.quality .quality__text + div .quality-button a:hover {
+  background-color: var(--color-global-small-title);
+}

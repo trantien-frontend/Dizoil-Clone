@@ -1,0 +1,126 @@
+.about-us-3 {
+  background: url("../images/about-section-3/top-view-of-oil-tank-2022-12-15-19-46-39-utc-1.jpg")
+    no-repeat center center;
+  background-size: cover;
+
+  position: relative;
+
+  padding: 5rem 0;
+}
+
+.about-us-3::after {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background-color: #000;
+  opacity: 0.75;
+}
+
+.about-us-3 .about-us-3__text {
+  position: relative;
+  z-index: 1;
+}
+
+.about-us-3 .about-us-3__text h2 + p {
+  padding: 2rem 0;
+}
+
+@media only screen and (min-width: 768px) {
+  .about-us-3 .about-us-3__text h2 + p + div {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.about-us-3 .about-us-3__text h2 + p + div + div {
+  margin: 4rem 0;
+}
+
+.about-us-3 .about-us-3__text h2 + p + div + div > a {
+  padding: 1.5rem 3rem 1.5rem 3rem;
+}
+
+.about-us-3 .about-us-3__img {
+  position: relative;
+  z-index: 1;
+}
+
+.about-us-3 .about-us-3__img p {
+  padding-bottom: 3rem;
+}
+
+.about-us-3 .about-us-3__img p + div {
+  position: relative;
+}
+
+.about-us-3 .about-us-3__img p + div > img + div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.about-us-3 .about-us-3__img > div > .about-us-3-count {
+  display: none;
+}
+
+@media only screen and (min-width: 600px) {
+  .about-us-3 .about-us-3__img > div > .about-us-3-count {
+    display: block;
+  }
+
+  .about-us-3 .about-us-3__img > div > .about-us-3-count div {
+    position: absolute;
+    bottom: -2.5rem;
+    left: -1.5rem;
+    padding: 2.5rem 3rem;
+    display: inline-block;
+    text-align: center;
+    background-color: var(--white);
+  }
+
+  .about-us-3 .about-us-3__img > div > .about-us-3-count div > * {
+    display: block;
+  }
+
+  .about-us-3 .about-us-3__img > div > .about-us-3-count div span:first-child {
+    font-size: 3.6rem;
+    font-weight: 600;
+    color: var(--color-global-title);
+    margin-bottom: 10px;
+  }
+
+  .about-us-3 .about-us-3__img > div > .about-us-3-count div span:last-child {
+    text-transform: capitalize;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    color: var(--color-global-accent);
+  }
+
+  @media only screen and (min-width: 768px) {
+    .about-us-3 .about-us-3__img > div > .about-us-3-count div {
+      bottom: -10rem;
+      left: -2.5rem;
+    }
+  }
+
+  @media only screen and (min-width: 992px) {
+    .about-us-3 .about-us-3__img > div > .about-us-3-count div {
+      max-width: 30%;
+      bottom: -7rem;
+      left: 3rem;
+    }
+  }
+}
+
+.about-us-3 .about-us-3__brand {
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  left: 1%;
+  width: 98%;
+  padding: 2rem;
+  background-color: var(--white);
+}

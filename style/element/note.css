@@ -1,0 +1,64 @@
+.note {
+}
+
+.note .note-item {
+  padding: 5px 0px 1.5rem 2.8rem;
+  position: relative;
+}
+
+.note .note-item span {
+  color: var(--color-global-accent);
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 2rem;
+}
+.note .note-item .note-item__title {
+}
+
+.note .note-item .note-item__title h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--white);
+  margin-bottom: 1.2rem;
+}
+
+.note .note-item .note-item__title--primary h4 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  letter-spacing: 0px;
+  text-transform: capitalize;
+  color: var(--color-global-title);
+  margin-bottom: 1.2rem;
+}
+
+.note .note-item .note-item__title p {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--color-text-thrid);
+}
+
+.note .note-item .note-item__title--primary p {
+  font-size: 1.4rem;
+  line-height: 2rem;
+  color: var(--color-text-first);
+}
+
+@media only screen and (min-width: 768px) {
+  .note .note-item span {
+    top: 40%;
+    transform: translateY(-50%);
+  }
+
+  .note .note-item .note-item__title h4 {
+    font-size: 1.4rem;
+  }
+
+  .note .note-item .note-item__title p {
+    font-size: 1.3rem;
+    font-weight: 600;
+    line-height: 2rem;
+  }
+}

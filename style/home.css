@@ -1,10 +1,109 @@
-@import url(./button.css);
+@import url(./section/about-us-1.css);
+@import url(./section/about-us-2.css);
+@import url(./section/about-us-3.css);
+@import url(./section/about-us-4.css);
+@import url(./section/about-us-5.css);
+@import url(./section/about-us-6.css);
+@import url(./section/count-up-section.css);
+@import url(./section/service-section.css);
+@import url(./section/testimonials.css);
+@import url(./section/quality-section.css);
+@import url(./section/work-with-us.css);
+
+@import url(./element/text.css);
+@import url(./element/button.css);
+@import url(./element/note.css);
+@import url(./element/box-icon.css);
+@import url(./element/card.css);
+@import url(./element/starts.css);
+
+.banner-list-img {
+  position: absolute;
+  left: 0%;
+  top: 0;
+  z-index: -1;
+
+  width: 100%;
+  height: 100%;
+
+  transition: 1s;
+}
+
+.banner-list-img .item {
+  position: absolute;
+  left: 0%;
+  top: 0;
+  width: 100%;
+  height: 100%;
+
+  opacity: 0;
+
+  z-index: 1;
+  transition: 1s all;
+}
+
+.banner-list-img .item:nth-child(1) {
+  animation: example;
+  animation-duration: 1.2s;
+  opacity: 1;
+  animation-timing-function: ease-in-out;
+}
+
+.banner-list-img .item:nth-child(2) {
+  animation: example2;
+  animation-duration: 1.2s;
+  opacity: 1;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes example {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: -100%;
+  }
+}
+
+@keyframes example2 {
+  0% {
+    left: 100%;
+  }
+  100% {
+    left: 0%;
+  }
+}
+
+.banner-list-img div img {
+  position: absolute;
+  left: 0;
+  top: 0;
+
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
 .banner-text {
-  padding: 8rem 0;
   position: relative;
+  padding-top: 6rem;
+  padding-bottom: 3.5rem;
+  z-index: 1;
 }
+
 .banner-text .banner-text__content {
+  position: relative;
+  padding-bottom: 5.5rem;
+}
+
+.banner-text .banner-text__content::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 0.5px;
+  background-color: var(--white);
 }
 
 .banner-text .banner-text__content h2 {
@@ -14,19 +113,306 @@
 }
 
 .banner-text .banner-text__content p {
-  padding: 2rem 0;
+  padding: 2rem 0px 2.5rem;
   color: var(--color-text-thrid);
   font-weight: 500;
   margin-bottom: 1.5rem;
+  line-height: 1.9rem;
+}
+
+@media only screen and (min-width: 576px) {
+  .banner-text .banner-text__content {
+    padding-right: 10rem;
+    padding-left: 1.5rem;
+  }
 }
 
 @media only screen and (min-width: 768px) {
+  .banner-text {
+    padding-bottom: 5rem;
+  }
   .banner-text .banner-text__content {
-    padding-right: 22rem;
+    padding-right: 27rem;
+    padding-left: 1.5rem;
+    padding-bottom: 7rem;
   }
   .banner-text .banner-text__content h2 {
     color: var(--white);
     font-weight: 600;
-    font-size: 4.5rem;
+    font-size: 4.8rem;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .banner-text {
+    padding-bottom: 5rem;
+  }
+  .banner-text .banner-text__content {
+    padding-right: 50rem;
+    padding-left: 1.5rem;
+    padding-bottom: 7rem;
+  }
+  .banner-text .banner-text__content h2 {
+    color: var(--white);
+    font-weight: 600;
+    font-size: 4.8rem;
+  }
+}
+
+.succes-stories {
+  padding: 4rem 0;
+  background-color: var(--color-global-background);
+}
+
+.succes-stories .succes-stories__inner {
+  padding-bottom: 4.5rem;
+  border-bottom: 1px solid #e1e1e1;
+}
+
+.succes-stories .succes-stories__content {
+}
+
+.succes-stories .succes-stories__content p {
+  padding: 2rem 0px 5rem;
+}
+
+.succes-stories .succes-stories-cards {
+  padding-top: 5rem;
+}
+
+.succes-stories .succes-stories-cards .succes-stories-cards__card {
+  margin-bottom: 3.5rem;
+  text-align: center;
+}
+
+.succes-stories .succes-stories-cards .succes-stories-cards__card div + div {
+  background-color: var(--white);
+  padding: 3rem 2rem 4.5rem 2rem;
+}
+
+.succes-stories .succes-stories-cards .succes-stories-cards__card div + div h5 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--color-global-title);
+  margin-bottom: 10px;
+}
+
+@media only screen and (min-width: 768px) {
+  .succes-stories
+    .succes-stories-cards
+    .succes-stories-cards__card
+    div
+    + div
+    h5 {
+    font-size: 1.7rem;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .succes-stories
+    .succes-stories-cards
+    .succes-stories-cards__card
+    div
+    + div
+    h5 {
+    font-size: 2rem;
+  }
+}
+
+.succes-stories .succes-stories-cards .succes-stories-cards__card div + div p {
+  padding-bottom: 3.5rem;
+}
+
+@media only screen and (min-width: 768px) {
+  .succes-stories .image-height {
+    position: relative;
+    height: 157.73px;
+  }
+
+  .succes-stories .image-height img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .succes-stories .image-height {
+    height: 193.43px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .succes-stories .image-height {
+    height: 246.78px;
+  }
+}
+
+.lastest-article {
+  padding: 4rem 0;
+}
+
+.lastest-article .lastest-article-title {
+  display: flex;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+.lastest-article .lastest-article-title h2 {
+  padding-right: 2rem;
+  padding-bottom: 0px;
+}
+.lastest-article .lastest-article-title h2::after {
+  display: none;
+}
+
+.lastest-article .lastest-article-title > div {
+  height: 1px;
+  flex-grow: 1;
+  background-color: #bdbdbb;
+}
+
+.lastest-article .lastest-article-posts .lastest-article-posts__item {
+}
+@media only screen and (min-width: 1200px) {
+  .lastest-article .lastest-article-posts .lastest-article-posts__item {
+    display: flex;
+    margin-bottom: 2rem;
+  }
+
+  .lastest-article
+    .lastest-article-posts
+    .lastest-article-posts__item
+    .posts__item-thumbnail {
+    width: 40%;
+  }
+
+  .lastest-article
+    .lastest-article-posts
+    .lastest-article-posts__item
+    .posts__item-description {
+    width: 60%;
+  }
+
+  .lastest-article .lastest-article-posts .lastest-article-posts__item--custom {
+    display: block;
+  }
+  .lastest-article
+    .lastest-article-posts
+    .lastest-article-posts__item--custom
+    * {
+    width: 100% !important;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .lastest-article
+    .lastest-article-posts
+    .lastest-article-posts__item
+    .posts__item-thumbnail {
+    position: relative;
+    height: 23.5rem;
+  }
+
+  .lastest-article
+    .lastest-article-posts
+    .lastest-article-posts__item
+    .posts__item-thumbnail
+    img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .lastest-article
+    .lastest-article-posts
+    .lastest-article-posts__item
+    .posts__item-thumbnail--change_height {
+    height: 33.5rem;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .lastest-article
+    .lastest-article-posts
+    .lastest-article-posts__item
+    .posts__item-thumbnail
+    img {
+    position: relative;
+  }
+}
+
+.lastest-article
+  .lastest-article-posts
+  .lastest-article-posts__item
+  .posts__item-description {
+  padding: 2.3rem 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.lastest-article
+  .lastest-article-posts
+  .lastest-article-posts__item
+  .posts__item-description
+  .item-description__label {
+  padding-bottom: 1.4rem;
+}
+
+.lastest-article
+  .lastest-article-posts
+  .lastest-article-posts__item
+  .posts__item-description
+  .item-description__label
+  span {
+  font-size: 1.4rem;
+  text-transform: capitalize;
+  display: inline-block;
+}
+
+.lastest-article
+  .lastest-article-posts
+  .lastest-article-posts__item
+  .posts__item-description
+  .item-description__label
+  span:first-child {
+  color: var(--color-global-accent);
+  padding-right: 2.2rem;
+}
+
+.lastest-article
+  .lastest-article-posts
+  .lastest-article-posts__item
+  .posts__item-description
+  h4 {
+  padding-bottom: 1.5rem;
+}
+
+.lastest-article
+  .lastest-article-posts
+  .lastest-article-posts__item
+  .posts__item-description
+  h4
+  a {
+  color: var(--color-global-title);
+}
+
+@media only screen and (min-width: 768px) {
+  .lastest-article
+    .lastest-article-posts
+    .lastest-article-posts__item
+    .posts__item-description
+    h4 {
+    font-size: 1.7rem;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .lastest-article
+    .lastest-article-posts
+    .lastest-article-posts__item
+    .posts__item-description
+    h4 {
+    font-size: 2rem;
   }
 }

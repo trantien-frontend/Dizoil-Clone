@@ -1,0 +1,155 @@
+.card {
+  position: relative;
+
+  background-color: var(--white);
+  padding: 3rem 3rem 4rem 3rem;
+
+  overflow: hidden;
+}
+
+.card > div {
+  position: relative;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+
+  transform: translateX(100%);
+  opacity: 0;
+  transition: 0.5s all;
+  background-color: var(--color-global-accent);
+}
+
+.card:hover::before {
+  background-color: var(--color-global-accent);
+
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.card--dark {
+  background-color: var(--color-global-title);
+}
+
+.card--dark * {
+  color: var(--white) !important;
+}
+
+.card .card__icon .icon {
+  display: inline-block;
+  position: relative;
+
+  width: 6rem;
+  height: 6rem;
+
+  background-color: var(--white);
+  border-color: #bdbdbd;
+  border-style: dashed;
+  border-width: 2px 2px 2px 2px;
+}
+
+.card--dark .card__icon .icon {
+  background-color: transparent;
+  border-color: var(--color-text-first);
+}
+
+.card .card__icon .icon .fa-solid {
+  position: absolute;
+
+  font-size: 2rem;
+  text-align: center;
+
+  width: 100%;
+  line-height: 6rem;
+  color: var(--color-global-accent);
+}
+
+.card .card__icon--primary .icon {
+  border-color: var(--color-global-title);
+}
+
+.card .card__icon--primary .icon .fa-solid {
+  color: var(--color-global-title);
+}
+
+.card .card__title {
+  font-size: 1.6rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  margin: 2rem 0px;
+  color: var(--color-global-title);
+}
+
+.card--dark:hover .card__title {
+  color: var(--color-global-title) !important;
+}
+
+.card .card__dsc {
+  font-size: 1.4rem;
+  line-height: 2.3rem;
+  color: var(--color-text-first);
+
+  margin-bottom: 4.2rem;
+}
+
+.card:hover .card__dsc {
+  color: var(--white);
+}
+
+.card .card__button {
+  width: 7rem;
+  height: 4.2rem;
+  background-color: var(--color-global-title);
+
+  text-align: center;
+  line-height: 4.2rem;
+}
+
+.card--dark .card__button {
+  background-color: var(--color-global-primary);
+}
+.card .card__button a {
+  font-size: 1.8rem;
+  color: var(--white);
+}
+
+.card .card__img-hover {
+  position: absolute;
+  right: -2.3rem;
+  bottom: -8rem;
+  opacity: 0;
+  transition: 0.5s all;
+}
+
+.card:hover .card__img-hover {
+  opacity: 1;
+  bottom: -4rem;
+}
+
+.card .card__img-hover .fa-solid {
+  font-size: 8rem;
+  color: var(--white);
+}
+
+.card .card__badge {
+  position: absolute;
+  right: -3rem;
+  bottom: -4rem;
+}
+
+.card .card__badge span {
+  display: inline-block;
+  font-size: 1.2rem;
+  font-weight: 600;
+
+  padding: 1.2rem 10px;
+  color: var(--white);
+  background-color: var(--color-global-title);
+}
+
+.card--dark .card__badge span {
+  background-color: var(--color-global-accent);
+}

@@ -1,0 +1,97 @@
+.about-us-5 {
+  position: relative;
+  padding-top: 6rem;
+}
+@media only screen and (min-width: 992px) {
+  .about-us-5 .row {
+    align-items: center;
+  }
+}
+.about-us-5::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+
+  background-color: var(--white);
+
+  opacity: 0.9;
+}
+
+.about-us-5::after {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+
+  background: url("/images/about-section-5/oil-refineries-2022-12-15-19-35-23-utc-1.jpg")
+    no-repeat center center;
+  background-size: cover;
+}
+.about-us-5 .about-us-5__content {
+}
+.about-us-5 .about-us-5__content h2 + p {
+  padding: 2rem 0;
+}
+
+.about-us-5 .about-us-5__img {
+}
+
+@media only screen and (min-width: 576px) {
+  .about-us-5 .about-us-5__img {
+    text-align: center;
+  }
+
+  .about-us-5 .about-us-5__img img {
+    display: inline-block;
+    width: 70%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .about-us-5 .about-us-5__img {
+    text-align: auto;
+  }
+
+  .about-us-5 .about-us-5__img img {
+    display: block;
+    width: 100%;
+  }
+}
+
+.about-us-5 .about-us-5__description {
+  display: none;
+}
+
+@media only screen and (min-width: 768px) {
+  .about-us-5 .about-us-5__description {
+    display: block;
+    text-align: right;
+  }
+
+  .about-us-5 .about-us-5__description span {
+    display: block;
+  }
+
+  .about-us-5 .about-us-5__description span:first-child {
+    font-size: 3.6rem;
+    font-weight: 600;
+
+    color: var(--color-global-small-title);
+  }
+
+  .about-us-5 .about-us-5__description span:nth-child(2) {
+    text-transform: capitalize;
+    padding: 1.5rem 0;
+    color: var(--color-global-accent);
+  }
+
+  .about-us-5 .about-us-5__description .starts {
+    margin-top: 3rem;
+  }
+  .about-us-5 .about-us-5__description .starts + div {
+    margin-top: 3rem;
+  }
+}

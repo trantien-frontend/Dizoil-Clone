@@ -1,0 +1,110 @@
+.about-us-4 {
+  padding: 5rem 0;
+
+  background: url("/images/about-secition-4/oil-refineries-2022-12-15-19-35-23-utc-1.jpg")
+    no-repeat center center;
+  background-size: cover;
+  mix-blend-mode: multiply;
+
+  position: relative;
+}
+
+.about-us-4::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: #202833;
+  opacity: 0.99;
+  mix-blend-mode: multiply;
+}
+
+.about-us-4 .about-us-4__content {
+  position: relative;
+  z-index: 1;
+}
+
+.about-us-4 .about-us-4__content h3 {
+}
+
+.about-us-4 .about-us-4__content h2 {
+  color: var(--white);
+}
+
+.about-us-4 .about-us-4__content > p {
+  color: var(--color-text-secondary);
+  padding: 2rem 0;
+}
+
+.about-us-4 .about-us-4__content .about-us-4__box * {
+  color: var(--white);
+}
+
+.about-us-4 .about-us-4__content .about-us-4__box {
+  text-align: center;
+  padding: 3rem;
+  background-color: var(--color-global-accent);
+  margin-bottom: 2rem;
+}
+
+.about-us-4 .about-us-4__content .about-us-4__box > div svg {
+  width: 5rem;
+  height: 5rem;
+  fill: var(--white);
+}
+
+.about-us-4 .about-us-4__content .about-us-4__box span {
+  display: block;
+
+  font-size: 1.6rem;
+  font-weight: 600;
+
+  padding: 1.5rem 0;
+}
+
+.about-us-4 .about-us-4__content .about-us-4__box p {
+  line-height: 2rem;
+}
+
+.about-us-4 .about-us-4__content .about-us-4__box--secondary {
+  background: transparent;
+  border: 1px solid var(--color-global-line);
+  transition: 0.5s all;
+}
+
+.about-us-4 .about-us-4__content .about-us-4__box--secondary > div svg {
+  fill: var(--color-global-accent);
+  transition: inherit;
+}
+
+.about-us-4 .about-us-4__content .about-us-4__box--secondary p {
+  color: var(--color-text-first);
+}
+
+@media only screen and (min-width: 992px) {
+  .about-us-4 .about-us-4__content .about-us-4__box--secondary p {
+    padding-bottom: 1.68rem;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .about-us-4 .about-us-4__content .about-us-4__box--secondary p {
+    padding-bottom: 0px;
+  }
+}
+
+.about-us-4 .about-us-4__content .about-us-4__box--secondary:hover {
+  background-color: var(--color-global-accent);
+}
+
+.about-us-4 .about-us-4__content .about-us-4__box--secondary:hover svg {
+  fill: var(--white);
+}
+
+.about-us-4 .about-us-4__img {
+  position: relative;
+  z-index: 1;
+}
+
+.about-us-4 .about-us-4__img img {
+  filter: grayscale(100%);
+}

@@ -1,0 +1,27 @@
+.box-icon {
+  margin-bottom: 1.5rem;
+}
+
+.box-icon .icon {
+  display: block;
+  color: var(--color-global-title);
+}
+.box-icon .icon .fa-solid {
+  padding: 1.2rem;
+  background-color: var(--color-global-accent);
+}
+
+.box-icon .box-icon__title {
+  color: var(--white);
+  display: block;
+  padding: 1.5rem 0px 2.2rem;
+}
+@media only screen and (min-width: 768px) {
+  .box-icon .box-icon__title {
+    font-size: 1.7rem;
+  }
+}
+
+.box-icon .box-icon__dsc {
+  color: var(--color-text-secondary);
+}
