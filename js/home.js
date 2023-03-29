@@ -1,4 +1,5 @@
-import { isInViewport } from "./utils/in-view-port.js";
+import { initCouterUp } from "./utils/countUp.js";
+import { initPercent } from "./utils/percent.js";
 
 function autoSlide() {
   const slide = document.querySelector(".banner-list-img");
@@ -12,90 +13,48 @@ function autoSlide() {
   slide.appendChild(lists[0]);
 }
 
-function counterUp(countUpItem) {
-  if (!countUpItem) return;
+function dragSlide() {
+  const slide = document.querySelector(".brand");
 
-  const listCharacter = ["K", "%", "+"];
+  let isDown = false;
 
-  const text = countUpItem.textContent;
+  let statrX;
 
-  const index = listCharacter.findIndex(
-    (character) => text.indexOf(character) >= 0
-  );
+  let scrollLeft;
 
-  let duration = 40;
-  if (listCharacter[index] === listCharacter[0]) duration = 2000;
+  slide.addEventListener("mousedown", (e) => {
+    isDown = true;
 
-  let startCount = 0;
-  let endCount = parseFloat(countUpItem.getAttribute("data-counter"));
+    slide.classList.add("active");
 
-  const idInterVal = setInterval(() => {
-    startCount += 1;
-
-    countUpItem.textContent = `${startCount}${listCharacter[index]}`;
-
-    if (startCount === endCount) clearInterval(idInterVal);
-  }, duration);
-}
-
-function initCouterUp() {
-  const countUpSection = document.querySelector(".count-up");
-
-  if (!countUpSection) return;
-
-  const listCountUp = countUpSection.querySelectorAll(
-    ".count-up__item [data-counter]"
-  );
-
-  if (!listCountUp) return;
-  let counting = false;
-
-  window.addEventListener("scroll", (e) => {
-    if (isInViewport(countUpSection) && !counting) {
-      counting = true;
-      listCountUp.forEach((countUpItem) => counterUp(countUpItem));
-    }
+    statrX = e.pageX;
   });
-}
 
-function runPercent(percentItem) {
-  if (!percentItem) return;
+  slide.addEventListener("mouseleave", () => {
+    isDown = false;
+    slide.classList.remove("active");
+  });
 
-  const DURATION = 20;
-  let start = 0;
-  const targetPercent = percentItem.getAttribute("data-percent");
+  slide.addEventListener("mouseup", () => {
+    isDown = false;
+    slide.classList.remove("active");
+  });
 
-  const textPercent = percentItem.previousElementSibling.children[0];
+  slide.addEventListener("mousemove", (e) => {
+    if (!isDown) return;
+    e.preventDefault();
 
-  const idInterVal = setInterval(() => {
-    start += 1;
+    const x = e.pageX;
+    const walk = (x - statrX) * 3;
 
-    percentItem.children[0].style.width = `${start}%`;
-    textPercent.textContent = `${start}%`;
-
-    if (start == targetPercent) clearInterval(idInterVal);
-  }, DURATION);
-}
-
-function initPercent() {
-  let isRunPercent = false;
-
-  const percentSection = document.querySelector(".about-us-6");
-
-  if (!percentSection) return;
-
-  const percentListItem = percentSection.querySelectorAll(".percent__skill");
-
-  window.addEventListener("scroll", () => {
-    if (isInViewport(percentSection) && !isRunPercent) {
-      isRunPercent = true;
-      percentListItem.forEach((percentItem) => runPercent(percentItem));
-    }
+    slide.scrollLeft = walk;
   });
 }
 
 (() => {
   setInterval(autoSlide, 3500);
-  initCouterUp();
-  initPercent();
+  initCouterUp(".count-up");
+  initCouterUp(".about-us-5");
+  initPercent(".about-us-6");
+  dragSlide();
 })();

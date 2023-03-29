@@ -1,7 +1,7 @@
 .service {
   position: relative;
   z-index: 1;
-  padding: 8rem 0;
+  padding: 18rem 0px 8rem;
   background-color: var(--color-global-background);
 }
 

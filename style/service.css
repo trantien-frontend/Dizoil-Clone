@@ -1,0 +1,132 @@
+@import url(./element/banner.css);
+@import url(./element/card.css);
+@import url(./element/starts.css);
+
+@import url(./section/service-section.css);
+@import url(./section/about-us-4.css);
+@import url(./section/about-us-5.css);
+@import url(./section/about-us-6.css);
+@import url(./section/testimonials.css);
+
+main {
+  margin-top: 0px;
+}
+
+.service {
+  padding: 8rem 0 7rem;
+}
+
+.service-below {
+  margin-top: 6rem;
+}
+
+@media only screen and (min-width: 768px) {
+  .service {
+    padding: 8rem 0 25rem;
+  }
+
+  .service-below {
+    position: absolute;
+
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+    transform: translateY(50%);
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .service {
+    padding: 8rem 0 20rem;
+  }
+}
+
+.service-below > div > div {
+  background-color: var(--white);
+  padding: 4rem;
+}
+
+.service-below .service-below__card {
+  margin-bottom: 2.5rem;
+}
+
+.service-below .service-below__card .icon {
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.service-below .service-below__card .icon i {
+  color: var(--color-global-title);
+
+  font-size: 3rem;
+
+  margin-right: 2rem;
+}
+
+.service-below .service-below__card .icon span {
+  font-size: 3.8rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  opacity: 0.1;
+}
+
+.service-below .service-below__card .icon--style i {
+  color: var(--color-global-accent);
+}
+
+.service-below .service-below__card h4 {
+  position: relative;
+  font-size: 1.6rem;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  color: var(--color-global-title);
+}
+
+.service-below .service-below__card h4::after {
+  content: "";
+
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  width: 32%;
+  height: 3px;
+  background-color: var(--color-global-accent);
+}
+
+@media only screen and (min-width: 992px) {
+  .service-below .service-below__card h4 {
+    font-size: 1.7rem;
+  }
+
+  .service-below .service-below__card h4::after {
+    width: 45%;
+  }
+}
+
+.service-below .service-below__card p {
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+  max-width: 90%;
+}
+
+@media only screen and (min-width: 992px) {
+  .service-below .service-below__card p {
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .about-us-4 {
+    padding: 25rem 0 5rem !important;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .about-us-4 {
+    padding: 20rem 0 5rem !important;
+  }
+}

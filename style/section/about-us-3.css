@@ -5,7 +5,7 @@
 
   position: relative;
 
-  padding: 5rem 0;
+  padding: 5rem 0px 18rem 0px;
 }
 
 .about-us-3::after {
@@ -117,10 +117,99 @@
 
 .about-us-3 .about-us-3__brand {
   position: absolute;
-  z-index: 1;
-  bottom: 0;
-  left: 1%;
-  width: 98%;
-  padding: 2rem;
+  z-index: 2;
+  bottom: 0%;
+  transform: translateY(50%);
+  left: 5%;
+  width: 90%;
+  padding: 5rem 3rem;
   background-color: var(--white);
+}
+
+.about-us-3 .about-us-3__brand h4 {
+  position: relative;
+  font-size: 2rem;
+  line-height: 3rem;
+  color: var(--color-global-title);
+  padding-bottom: 2rem;
+  margin-bottom: 3rem;
+}
+
+.about-us-3 .about-us-3__brand h4::after {
+  content: "";
+
+  position: absolute;
+  left: 0;
+  bottom: 0;
+
+  height: 3px;
+  width: 85%;
+
+  background-color: var(--color-global-accent);
+}
+
+@media only screen and (min-width: 400px) {
+  .about-us-3 .about-us-3__brand h4::after {
+    width: 70%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .about-us-3 .about-us-3__brand h4 {
+    margin-bottom: 0px;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .about-us-3 .about-us-3__brand h4 {
+    font-size: 2.4rem;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .about-us-3 .about-us-3__brand h4 {
+    font-size: 2.8rem;
+    line-height: 4rem;
+  }
+}
+
+.about-us-3 .about-us-3__brand .brand {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  margin: 0 -1.5rem;
+
+  cursor: pointer;
+
+  width: 100%;
+  padding: 2rem 0;
+  overflow: hidden;
+}
+.about-us-3 .about-us-3__brand .brand::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+  background-color: transparent;
+}
+.about-us-3 .about-us-3__brand .active {
+  background-color: rebeccapurple;
+}
+
+.about-us-3 .about-us-3__brand .brand .brand-img {
+  flex: 0 0 50%;
+  padding: 0 1.5rem;
+}
+
+@media only screen and (min-width: 620px) {
+  .about-us-3 .about-us-3__brand .brand .brand-img {
+    flex-basis: calc(100% / 3);
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .about-us-3 .about-us-3__brand .brand .brand-img {
+    flex-basis: calc(100% / 4);
+  }
 }

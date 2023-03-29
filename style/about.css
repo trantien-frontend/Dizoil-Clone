@@ -1,0 +1,15 @@
+@import url(./element/banner.css);
+@import url(./element/box-icon.css);
+@import url(./element/note.css);
+@import url(./element/starts.css);
+
+@import url(./section/about-us-1.css);
+@import url(./section/about-us-3.css);
+@import url(./section/about-us-2.css);
+@import url(./section/about-us-6.css);
+@import url(./section/about-us-5.css);
+@import url(./section/work-with-us.css);
+
+.about-us-2 {
+  margin-top: 10rem;
+}
