@@ -1,5 +1,1 @@
-export const wowJs = {
-  init() {
-    new WOW().init();
-  },
-};
+export function wowJs() {}
