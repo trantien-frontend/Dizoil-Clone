@@ -3,7 +3,7 @@ import { isInViewport } from "./in-view-port";
 function runPercent(percentItem) {
   if (!percentItem) return;
 
-  const DURATION = 20;
+  const DURATION = 40;
   let start = 0;
   const targetPercent = percentItem.getAttribute("data-percent");
 
@@ -30,7 +30,7 @@ export function initPercent(parentElement) {
 
   const callback = (entries, observe) => {
     entries.forEach((entry) => {
-      if (entry.intersectionRatio === 1 && !isRunPercent) {
+      if (entry.isIntersecting && !isRunPercent) {
         percentListItem.forEach((percentItem) => runPercent(percentItem));
         isRunPercent = true;
       }

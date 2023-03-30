@@ -1,0 +1,134 @@
+@import url(./element/banner.css);
+@import url(./element/note.css);
+@import url(./element/button.css);
+
+@import url(./section/count-up-section.css);
+@import url(./section/about-us-2.css);
+@import url(./section/quality-section.css);
+
+main {
+  margin-top: 0px !important;
+}
+.team-dizoil {
+  position: relative;
+  padding: 5rem 0;
+}
+
+.team-dizoil::after {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+
+  opacity: 0.1;
+
+  background: url("/images/team-member/industrial-team-bg.png") no-repeat center
+    center;
+  background-size: cover;
+}
+
+.industrial-team {
+  margin-bottom: 3rem;
+}
+
+.industrial-team .industrial-team__title {
+  padding-bottom: 2.5rem;
+}
+
+.industrial-team .industrial-team__title p {
+  margin-top: 2rem;
+}
+
+.tech-team .tech-team__title {
+  padding-bottom: 2.5rem;
+}
+
+.tech-team .tech-team__title p {
+  margin-top: 2rem;
+}
+
+.card-team {
+  box-shadow: 3px -1px 25px -8px rgba(0, 0, 0, 0.28);
+  -webkit-box-shadow: 3px -1px 25px -8px rgba(0, 0, 0, 0.28);
+  -moz-box-shadow: 3px -1px 25px -8px rgba(0, 0, 0, 0.28);
+  margin: 0rem auto 2rem auto;
+}
+
+.card-team .card-team__img {
+  position: relative;
+  height: 30rem;
+}
+
+@media only screen and (min-width: 450px) {
+  .card-team {
+    width: 80%;
+  }
+
+  .card-team .card-team__img {
+    height: 35rem;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .card-team {
+    width: 100%;
+  }
+
+  .card-team .card-team__img {
+    height: 40rem;
+  }
+}
+
+.card-team .card-team__img img {
+  position: absolute;
+  left: 0;
+  top: 0;
+
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-team .card-team__dsc {
+  text-align: center;
+  padding: 2rem 0;
+
+  background-color: var(--white);
+}
+
+.card-team .card-team__dsc h6 {
+  font-size: 1.6rem;
+  text-transform: capitalize;
+
+  color: var(--color-global-title);
+  margin-bottom: 10px;
+}
+.card-team .card-team__dsc span {
+  text-transform: capitalize;
+  font-size: 1.4rem;
+}
+.card-team .card-team__dsc ul {
+  margin-top: 1.2rem;
+}
+
+.card-team .card-team__dsc ul li {
+  display: inline-block;
+  padding: 5px;
+}
+
+.card-team .card-team__dsc ul li a {
+  display: inherit;
+  transition: 0.5s all;
+
+  color: var(--color-global-title);
+  background-color: var(--color-global-background);
+  width: 4rem;
+  height: 4rem;
+  line-height: 4rem;
+}
+
+.card-team .card-team__dsc ul li a:hover {
+  background-color: var(--color-global-accent);
+  color: var(--color-global-small-title);
+}

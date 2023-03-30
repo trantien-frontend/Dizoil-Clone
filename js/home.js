@@ -1,6 +1,6 @@
 import { initCouterUp } from "./utils/countUp.js";
 import { initPercent } from "./utils/percent.js";
-import WOW from "wow.js/src/WOW.js";
+import { wow } from "./utils/wow.js";
 
 function autoSlide() {
   const slide = document.querySelector(".banner-list-img");
@@ -58,5 +58,5 @@ function dragSlide() {
   initCouterUp(".about-us-5");
   initPercent(".about-us-6");
   dragSlide();
-  new WOW().init();
+  wow.init();
 })();

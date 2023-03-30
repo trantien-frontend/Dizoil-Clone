@@ -40,7 +40,7 @@ export function initCouterUp(parentElement) {
 
   const callback = (entries, observer) => {
     entries.forEach((entry) => {
-      if (entry.intersectionRatio === 1 && !counting) {
+      if (entry.isIntersecting && !counting) {
         listCountUp.forEach((countUpItem) => counterUp(countUpItem));
         counting = true;
       }
