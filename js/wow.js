@@ -611,5 +611,3 @@
   exports.default = WOW;
   module.exports = exports["default"];
 });
-
-new WOW().init();

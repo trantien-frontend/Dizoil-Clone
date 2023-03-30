@@ -11,5 +11,7 @@
   "devDependencies": {
     "vite": "^4.2.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "wow.js": "^1.2.2"
+  }
 }
