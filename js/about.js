@@ -1,6 +1,4 @@
-import { initCouterUp } from "./utils/countUp";
-import { initPercent } from "./utils/percent";
-import { wow } from "./utils/wow";
+import { initPercent, wow, initCouterUp } from "./utils";
 
 (() => {
   initPercent(".about-us-6");

@@ -12,6 +12,7 @@
     "vite": "^4.2.0"
   },
   "dependencies": {
+    "@splidejs/splide": "^4.1.4",
     "wow.js": "^1.2.2"
   }
 }
